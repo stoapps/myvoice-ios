@@ -1,0 +1,116 @@
+  <div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#/question" class="link">
+                <i class="icon icon-back"></i>
+                <span>Back</span>
+            </a>
+        </div>
+        <div class="center" onclick="myFunction()">New Question</div><div class="space"></div>
+        <div class="right">
+            <a href="#" class="link">
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+</div>
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through page" data-page="index">
+          <!-- Page, "data-page" contains page name -->
+         
+            <!-- Scrollable page content -->
+            <div class="page-content">
+                <div>
+                  <div ng-controller="TodoCtrl">
+                <!--===========================text-area-question-creation=================================-->
+               <div class="list-block">
+                   <div class="item-title label" id="question-label">Question</div><a href="#/qcreation" ng-click="addNew(newTodo)"><i class="fa fa-check-square-o fa-2x" id="submit"></i></a><a href="#"><i class="fa fa-close fa-2x" id="close"></i></a><br />
+  <ul>
+   
+    <!-- Additional "align-top" class for correct textarea alignment -->
+    <li class="align-top">
+        
+      <div class="item-content">
+            
+        <div class="item-inner">
+       
+          <div class="item-input">
+              <textarea placeholder="How are you today?" ng-model="newTodo.question"></textarea>
+          </div>
+        </div>
+      </div>
+    </li>
+  
+  </ul>
+</div>
+                 <!--===========================text-area-question-creation=================================-->
+                <!--==============================options box================================================-->
+                 <div class="list-block">
+                       <div class="item-title label" id="options-label">Options</div>
+                     <br />
+  <ul >
+    <!-- Text inputs -->
+    <li >
+      <div class="item-content">
+      
+        <div class="item-inner">
+        
+          <div class="item-input">
+            <input type="text" placeholder="option" ng-model="newTodo.option1" >
+          </div>
+              <div class="item-media"><i class="fa fa-trash"></i></div>
+        </div>
+      </div>
+    </li>
+                     </ul><div class="space"></div>
+                      <ul>
+    <!-- Text inputs -->
+    <li>
+      <div class="item-content">
+      
+        <div class="item-inner">
+        
+          <div class="item-input">
+            <input type="text" placeholder="option" ng-model="newTodo.option2">
+          </div>
+              <div class="item-media"><i class="fa fa-trash"></i></div>
+        </div>
+      </div>
+    </li>
+                     </ul><div class="space"></div>
+                      <ul>
+    <!-- Text inputs -->
+    <li>
+      <div class="item-content">
+     
+        <div class="item-inner">
+        
+          <div class="item-input">
+            <input type="text" placeholder="option" ng-model="newTodo.option3">
+          </div>
+              <div class="item-media"><i class="fa fa-trash"></i></div>
+        </div>
+      </div>
+    </li>
+                     </ul><div class="space"></div>
+                      <ul>
+    <!-- Text inputs -->
+    <li>
+      <div class="item-content">
+       
+        <div class="item-inner">
+        
+          <div class="item-input">
+            <input type="text" placeholder="option" ng-model="newTodo.option4">
+          </div>
+              <div class="item-media"><i class="fa fa-trash"></i></div>
+        </div>
+      </div>
+    </li>
+                     </ul>
+                </div>
+                <!--==============================options box================================================-->
+            </div>
+                </div>
+              </div>
+          </div>

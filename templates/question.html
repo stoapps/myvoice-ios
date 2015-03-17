@@ -1,0 +1,105 @@
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay" ng-controller="questionController"></div>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+       <div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="link">
+               <img id="logo-image" src="micro-32.png"/>
+              
+            </a>
+        </div>
+        <div class="center" id="question-header"><img src="ask_question-25.png" id="question-logo"/>Question</div><div class="space"></div>
+        <div class="right">
+            <a href="/newQuestion" class="link">
+               <img src="plus-25.png" id="question-plus"/>
+            </a>
+        </div>
+    </div>
+</div>
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content -->
+            <div class="page-content">
+              <!--======================segmented control==============================-->
+      <div class="content-block">
+    <!-- Buttons row as tabs controller -->
+    <div class="buttons-row">
+      <!-- Link to 1st tab, active -->
+      <a href="#tab1" class="tab-link active button">Current</a>
+      <!-- Link to 2nd tab -->
+      <a href="#tab2" class="tab-link button">History</a>
+    </div>
+  </div>
+  <!-- Tabs, tabs wrapper -->
+                
+  <div class="tabs">
+    <!-- Tab 1, active by default -->
+    <div id="tab1" class="tab active">
+      <div class="content-block">
+      <!--==================================question list --current tab data ==============================================-->
+    <div ng-init="friends = [
+  {name:'John', age:25, gender:'boy'},
+  {name:'Jessie', age:30, gender:'girl'},
+  {name:'Johanna', age:28, gender:'girl'},
+  {name:'Joy', age:15, gender:'girl'},
+  {name:'Mary', age:28, gender:'girl'},
+  {name:'Peter', age:95, gender:'boy'},
+  {name:'Sebastian', age:50, gender:'boy'},
+  {name:'Erika', age:27, gender:'girl'},
+  {name:'Patrick', age:40, gender:'boy'},
+  {name:'Samantha', age:60, gender:'girl'}
+]">
+        
+    <div class="list-block animate-repeat" ng-repeat="todo in todos">
+      <ul>
+        <li class="item-content" >
+          <div class="item-media"><i class="icon icon-f7"></i></div>
+          <div class="item-inner">
+            <div class="item-title ">
+                <h3>{{todo.question}}</h3>
+                <h5>A :{{todo.option1}} Gender :{{todo.option2}}</h5>
+              </div>
+          </div>
+        </li>
+      </ul>
+    <!--===============================toolbar- current tab data======================================================-->
+        <div class="toolbar tabbar">
+    <div class="toolbar-inner">
+        <a href="#tab1" class="tab-link">
+         <img src="edit-25.png"/>
+        </a>
+        <a href="#tab2" class="tab-link">
+          <img src="share-25.png"/>
+        </a>
+        <a href="#tab3" class="tab-link">
+            <img src="moved_topic-25.png"/>
+        </a>
+    </div>
+</div>
+    <!--================================toolbar - current tab data ===================================================-->
+    </div>
+    <!--==================================question list -- current tab data ==============================================-->
+      </div>
+    </div>
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+      <div class="content-block">
+        <p>This is tab 2 content</p>
+        ...
+      </div>
+    </div>
+  
+  </div>
+             <!--========================segmented control=============================-->
+    
+              
+            </div>
+          </div>
+        </div>

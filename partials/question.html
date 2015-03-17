@@ -1,0 +1,195 @@
+
+ 
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="link">
+               <img id="logo-image" src="images/micro-32.png"/>
+              
+            </a>
+        </div>
+        <div class="center" id="question-header" onclick="myFunction()"><img src="images/ask_question-25.png" id="question-logo"/>Question</div><div class="space"></div>
+        <div class="right">
+            <a href="#/qcreation" class="link">
+               <img src="images/plus-25.png" id="question-plus"/>
+            </a>
+        </div>
+    </div>
+</div>
+ 
+<div class="pages navbar-through toolbar-through page" data-page="index">
+ 
+
+ 
+<div class="page-content">
+<div class="content-block">
+    <!-- Buttons row as tabs controller -->
+    <div class="buttons-row">
+      <!-- Link to 1st tab, active -->
+      <a href="javascript:void(0);" class="tab-link active button " id="show-tab-1" onclick="current()">Current</a>
+      <!-- Link to 2nd tab -->
+      <a href="javascript:void(0);" class="tab-link  button " id="show-tab-2" onclick="history()">History</a>
+      <!-- Link to 3rd tab -->
+      
+    </div>
+  </div>
+  <!-- Tabs, tabs wrapper -->
+  <div class="tabs">
+    <!-- Tab 1, active by default -->
+    <div id="tab1" class="tab">
+      <div class="content-block" ng-controller="TodoCtrl">
+        
+         <div class="list-block animate-repeat" ng-repeat="todo in todos">
+             
+      <ul>
+           
+        <li class="item-content" >
+           
+         
+          <div class="item-inner">
+            <div class="item-title ">
+                <h3 id="question-title"><img src="images/b.png" class="question-ico"/><span id="quest-title">{{todo.question}}</span></h3>
+<table style="width:100%; margin-top: -27px; margin-left: -17px;" cellspacing="25">
+  <tr>
+    <td><img src="images/a.png" class="question-opt"/> :{{todo.option1}}</td>
+    <td><img src="images/a.png" class="question-opt"/> :{{todo.option2}}</td>		
+  </tr>
+  <tr>
+    <td><img src="images/a.png" class="question-opt"/> :{{todo.option3}}</td>
+    <td><img src="images/a.png" class="question-opt"/> :{{todo.option4}}</td>		
+  </tr>
+</table>
+                
+              </div>
+          </div>
+        </li>
+      </ul>
+             
+    <!--===============================toolbar- current tab data======================================================-->
+        <div class="toolbar tabbar" id="question-toolbox">
+    <div class="toolbar-inner">
+        <a href="#tab1" class="tab-link">
+            <div>
+         <img src="images/edit.png" class="question-icons"/><p style='display:inline-block;font-size:12px;' class="div-toolbar">Edit</p>
+               
+                </div>
+        </a>
+         <div class="headerDivider"></div>
+        <a href="#tab2" class="tab-link">
+            <div>
+          <img src="images/android-share.png" class="question-icons"/><p style='display:inline-block;font-size:12px;' class="div-toolbar">Share</p>
+               
+                </div>
+        </a>
+         <div class="headerDivider"></div>
+        <a href="#tab3" class="tab-link">
+            <div>
+            <img src="images/forward.png" class="question-icons"/><p style='display:inline-block;font-size:12px;' class="div-toolbar">Move</p>
+            </div>
+        </a>
+    </div>
+</div>
+    <!--================================toolbar - current tab data ===================================================-->
+    </div>
+          <div class="list-block animate-repeat" ng-repeat="todo in todos">
+             
+      <ul>
+           
+        <li class="item-content1" >
+           
+         
+          <div class="item-inner">
+            <div class="item-title ">
+                <h3 id="question-title"><img src="images/b.png" class="question-ico"/><span id="quest-title">{{todo.question}}</span></h3>
+<table style="width:100%; margin-top: -27px; margin-left: -17px;" cellspacing="25">
+  <tr>
+    <td><img src="images/a.png" class="question-opt"/> :{{todo.option1}}</td>
+    <td><img src="images/a.png" class="question-opt"/> :{{todo.option2}}</td>		
+  </tr>
+  <tr>
+    <td><img src="images/a.png" class="question-opt"/> :{{todo.option3}}</td>
+    <td><img src="images/a.png" class="question-opt"/> :{{todo.option4}}</td>		
+  </tr>
+</table>
+                
+              </div>
+          </div>
+        </li>
+      </ul>
+             
+    <!--===============================toolbar- current tab data======================================================-->
+        <div class="toolbar tabbar" id="question-toolbox">
+    <div class="toolbar-inner">
+        <a href="#tab1" class="tab-link">
+            <div>
+         <img src="images/edit.png" class="question-icons"/><p style='display:inline-block;font-size:12px;' class="div-toolbar">Edit</p>
+               
+                </div>
+        </a>
+         <div class="headerDivider"></div>
+        <a href="#tab2" class="tab-link">
+            <div>
+          <img src="images/android-share.png" class="question-icons"/><p style='display:inline-block;font-size:12px;' class="div-toolbar">Share</p>
+               
+                </div>
+        </a>
+         <div class="headerDivider"></div>
+        <a href="#tab3" class="tab-link">
+            <div>
+            <img src="images/forward.png" class="question-icons"/><p style='display:inline-block;font-size:12px;' class="div-toolbar">Move</p>
+            </div>
+        </a>
+    </div>
+</div>
+    <!--================================toolbar - current tab data ===================================================-->
+    </div>
+       
+      </div>
+    </div>
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+       <div class="content-block" ng-controller="TodoCtrl">
+         <div class="list-block animate-repeat" ng-repeat="todo in todos">
+      <ul>
+          history
+        <li class="item-content" >
+          <div class="item-media"><i class="icon icon-f7"></i></div>
+          <div class="item-inner">
+            <div class="item-title ">
+                <h3>{{todo.question}}</h3>
+                <h5>A :{{todo.option1}} B :{{todo.option2}} C:{{todo.option3}} D:{{todo.option4}}</h5>
+              </div>
+          </div>
+        </li>
+      </ul>
+    <!--===============================toolbar- current tab data======================================================-->
+        <div class="toolbar tabbar" id="question-toolbox">
+    <div class="toolbar-inner">
+        <a href="#tab1" class="tab-link">
+         <img src="images/edit-25.png" class="question-icons"/>
+        </a>
+        <a href="#tab2" class="tab-link">
+          <img src="images/share-25.png" class="question-icons"/>
+        </a>
+        <a href="#tab3" class="tab-link">
+            <img src="images/moved_topic-25.png" class="question-icons"/>
+        </a>
+    </div>
+</div>
+    <!--================================toolbar - current tab data ===================================================-->
+    </div>
+       
+      </div>
+      </div>
+    </div>
+    <!-- Tab 3 -->
+   
+  </div>
+</div>
+
+
+</div>
+</div>
+
+ 
+   

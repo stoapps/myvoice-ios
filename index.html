@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html> <!--<![endif]-->
+<head>
+
+    <!-- Meta-Information -->
+    <title>myvoice</title>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Our Website CSS Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://include.jaydata.org/jaydata.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+   <link rel="stylesheet" href="css/ionicons.min.css"/>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <link href="css/options.css" rel="stylesheet"/>
+ <style type="text/css">
+        #question-label,#options-label
+        {
+            margin-left: 20px;
+        }
+        .space
+        {
+            padding-bottom: 7px;
+        }
+        #submit
+        {
+           position: relative;
+float: right;
+/* clear: both; */
+margin-top: -28px;
+/* margin-left: -40px; */
+margin-right: 62px;
+        }
+        #close
+        {
+            position: relative;
+float: right;
+/* clear: both; */
+margin-top: -30px;
+/* margin-left: -40px; */
+margin-right: -75px;
+        }
+        .navbar
+        {
+            background-color:  #22B7F2
+        }
+        .page-content
+     {
+         background-color: white;
+     }
+        #logo-image
+        {
+            width: 38px;
+            height: 38px;
+        }
+        #question-header
+        {
+            margin-left: 10px;
+        }
+        #question-logo
+        {
+            width: 20px;
+            height: 20px;
+            padding-right: 3px; 
+        }
+       .question-icons
+     {
+         width: 14px;
+         height: 14px;
+     }
+     #question-toolbox
+     {
+         height: 26px;
+     }
+     .div-toolbar
+     {
+         margin-left: 2px;
+         margin-top: 5px;
+     }
+   .headerDivider {
+    border-left: 1px solid #c8c7cc;
+border-right: 1px solid #c8c7cc;
+height: 26px;
+position: relative;
+right: 0px;
+top: 0px;
+}
+      #headerDivider2 {
+   border-left: 1px solid #c8c7cc;
+border-right: 1px solid #c8c7cc;
+height: 27px;
+position: relative;
+right: 0px;
+top: 0px;
+}
+.amber-ribbon
+     
+       {
+border-left: 3px solid #ffbf00;
+border-right: 1px solid #ffbf00;
+height: 132px;
+padding-bottom: 0px;
+position: relative;
+right: 15px;
+top: 0px;
+}
+     
+     .green-ribbon
+     {
+border-left: 4px solid #00b200;
+border-right: 1px solid #00b200;
+height: 132px;
+padding-bottom: 0px;
+position: absolute;
+right: 295px;
+top: -1px;
+     }
+     /*questions page list block ul border */
+   li.item-content{
+         border-right: 1px solid #c8c7cc;
+         border-left:  3px solid #ffbf00;
+         height: 147px;
+     }
+      li.item-content1{
+         border-right: 1px solid #c8c7cc;
+         border-left:  3px solid #009700;
+         height: 147px;
+     }
+     /*questions page list block ul border */
+     /*questions page tool bar border */
+     .toolbar
+     {
+        border:1px solid #c4c4c4;
+     }
+     /*questions page tool bar border */
+     /* question badge in the question page  */
+      .question-badge
+     {
+         margin-top: -133px;
+         margin-right: 8px;
+position: relative;
+     }
+     #question-badge-size
+     {
+         position: relative;
+         width: 20px;
+         height: 20px;
+     }
+     /* question badge in the question page  */
+     /*===================== styles related to questions in questions page============================== */
+      
+     @font-face {
+    font-family: myFirstFont;
+    src:url('css/Bariol_regular.otf');
+}
+     #question-title
+     {
+        font-family: myFirstFont, Fallback, sans-serif;
+     }
+     /*===================== styles related to questions in questions page============================== */
+     .question-opt
+     {
+         width: 14px;
+         height: 14px;
+     }
+     .question-ico
+     {
+        width: 42px;
+height: 42px;
+margin-left: -4px;
+margin-top: 9px;
+     }
+     #quest-title
+     {
+        margin-top: 17px;
+position: absolute;
+     }
+     .content-block
+     {
+         margin: 15px 0;
+     }
+     #tab1,#tab2
+     {
+         margin-top: -15px;
+     }
+    </style>
+    <script type="text/javascript">
+     var myApp = new Framework7();   
+     var $$ = Dom7;
+       
+
+      function history(){
+         
+          myApp.showTab('#tab2');
+         
+      }
+      function current(){
+          myApp.showTab("#tab1");
+      }
+    </script>
+</head>
+<body ng-app="tutorialWebApp">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Our Website Content Goes Here -->
+ <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <!-- Views -->
+     <div class="views">
+    <div class="view view-main">
+         <div ng-view></div>
+    </div>
+    </div>
+
+
+<!-- Vendor: Angular, followed by our custom Javascripts -->
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-route.js"></script>    
+
+<!-- Our Website Javascripts -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
